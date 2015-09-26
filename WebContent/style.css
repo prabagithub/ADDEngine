@@ -1,0 +1,127 @@
+body{
+	background-color: #E5E5F2;
+	background:url(images/bg.jpg) repeat scroll center;
+}
+.redribbon {
+    background: #890000 none repeat scroll 0px 0px;
+    height: 30px;
+    width: 100%;
+}
+
+.branding {
+    background: #FFF none repeat scroll 0% 0%;
+    position: relative;
+    z-index: 2;
+}
+
+.container_12{
+    background-color: #EAE3E3;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left:20px;
+    margin-right:20px;
+}
+h1 {
+    color: #B00000;
+    font-size: 25px;
+}
+
+.content{
+	margin-left:200px;
+	margin-top:100px;
+}
+
+.button.red {
+    border: 1px solid #890000;
+    text-shadow: 0px 0px 0px #FFF;
+    background: transparent linear-gradient(to bottom, #B00000 0%, #B00000 2%, #B00000 100%) repeat scroll 0% 0%;
+}
+.button.xlarge {
+    font-size: 14px;
+    border-radius:2px;
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3)	;
+    
+}
+
+.red{
+  color:red;
+}
+
+.white{
+	color:white;
+}
+
+.green{
+	color:green;
+}
+
+.black{
+	color:black;
+}
+
+.verizoncolor{
+	color:#890000;
+}
+
+.top{
+	margin-top:20px;
+	margin-left:10px;
+}
+
+.overtop{
+	margin-top:10px;
+}
+
+
+
+.slideShowContainer{
+	height:150px;
+	margin-bottom:10px;
+}
+
+.slidebox{
+	margin-left:100px;
+}
+
+.loginContainer{
+ position: relative;
+    top: 25%;
+    left: 25%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 600px;
+    height: 300px;
+background-color: #F7F7F7;
+border-radius:2px;
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3)	;
+}
+
+.container{
+	margin-left:100px;
+	margin-top:100px;
+}
+
+.loginContainer table{
+	margin-left: 20%;
+margin-top: 10%;
+position: absolute;
+	
+}
+
+.loginContainer tr{
+	width: 100px;
+height: 30px;
+}
+
+.loginContainer td{
+	width:100px;	
+}
+
+.loginContainer input{
+	width:200px;
+}
+
+.loginheader{
+	margin-left:40%;
+	position:absolute;
+}
