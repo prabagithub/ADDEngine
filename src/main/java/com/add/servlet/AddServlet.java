@@ -51,6 +51,7 @@ public class AddServlet extends HttpServlet {
 		client.setCountry(request.getParameter("country"));
 		client.setPostalCode(request.getParameter("zip"));
 		client.setAddDesc(request.getParameter("desc"));
+		client.setUserName(request.getParameter("username"));
 		request.setAttribute("client", client);
 		MongoDBDAO mongoDAO = new MongoDBDAO();
 		if(mongoDAO.insertADDDetails(client)){

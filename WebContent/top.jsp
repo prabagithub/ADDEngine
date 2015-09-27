@@ -4,7 +4,8 @@
                 </tr>
                 </tbody></table>  
                 <table align="right">
-                <tr><td><a href="login.jsp"><span class="white">Logout</span></a></td></tr>
+                <tr><td><span class="white"> Welcome ${username}  <img src="images/acc.png" style="height:25px;width:20px"> </span></td></tr>                                               
+                <tr><td><a href="login.jsp" class="button red xlarge" ><span class="white">Logout</span></a></td></tr>
                 </table>              
                 <div class="redribbon"></div>                                
                 <div class="overtop {{color}}">{{overtopmsg}}</div>                

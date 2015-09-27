@@ -30,7 +30,7 @@ var LoginController = function($scope){
 	  $scope.pwd="Password";
 	  $scope.btnvalue="Login";
 	  $scope.regmsg="Don't have an account,  create now, it is simple";
-	  
+	  $scope.filename="register.jsp";
 	}
 
 var RegisterController = function($scope){
@@ -42,7 +42,8 @@ var RegisterController = function($scope){
 	  $scope.username="User name";
 	  $scope.pwd="Password";
 	  $scope.btnvalue="Register";
-	 
+	  $scope.regmsg="Already have an account, click here to login";
+	  $scope.filename="login.jsp"
 	  
 	}
 

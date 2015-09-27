@@ -57,9 +57,9 @@ public class LoginServlet extends HttpServlet {
 			if(mongo.checkUser(user)){
 				viewName="/home.jsp";
 			}
-			request.setAttribute("username", user.getUsername());
+			
 		}
-					
+		request.setAttribute("username", user.getUsername());			
 		rd = request.getRequestDispatcher(viewName);
 		} catch(Exception e){			
 			rd = request.getRequestDispatcher(viewName);

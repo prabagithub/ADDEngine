@@ -35,7 +35,7 @@
 </tr>
 
 <tr>
-<td colspan="2"><a style="text-decoration:none;color:#B00000;"  href="register.jsp">{{regmsg}}</a></td>
+<td colspan="2"><a style="text-decoration:none;color:#B00000;"  href="{{filename}}">{{regmsg}}</a></td>
 </tr>
 </table>
 </div>

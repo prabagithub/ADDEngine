@@ -1,5 +1,4 @@
 <html ng-app>
-
   <head>
     <script src="https://code.angularjs.org/1.3.0-beta.5/angular.js" 
     data-require="angular.js@*" data-semver="2.0.0-alpha.31"></script>        
@@ -8,10 +7,18 @@
   </head>
 
   <body ng-controller="MainController">
-<jsp:include page="top.jsp"></jsp:include>
+  <%String username = null;
+if(null != request.getAttribute("username")){
+	username = (String)request.getAttribute("username");
+}
+	%>
+<jsp:include page="top.jsp">
+<jsp:param value="<%=username %>" name="username"/>
+</jsp:include>
 <div class="branding container_12">           
-<form action="AddServlet" method="post" name="home" onsubmit="return check()">
+<form action="AddServlet" method="post" name="home" onsubmit="return check()" >
 
+<input type="hidden" name="username" value="<%=username %> "/>
 <div class="content">
 	<table>
 	<tr>

@@ -19,6 +19,8 @@ public class Client {
 	 private String postalCode;
 	 
 	 private String addDesc;
+	 
+	 private String userName;
 
 	/**
 	 * @return the orgName
@@ -144,6 +146,20 @@ public class Client {
 	 */
 	public void setAddDesc(String addDesc) {
 		this.addDesc = addDesc;
+	}
+
+	/**
+	 * @return the userName
+	 */
+	public String getUserName() {
+		return userName;
+	}
+
+	/**
+	 * @param userName the userName to set
+	 */
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	 
 	 
