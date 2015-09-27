@@ -32,7 +32,7 @@ public class MongoDBDAO {
 			mongoClient = new MongoClient(uu);
 		//	mongoClient = new MongoClient("localhost", 27017);
 			if(null != mongoClient){
-				mongoDatabase = mongoClient.getDatabase("Client");	
+				mongoDatabase = mongoClient.getDatabase("CloudFoundry_rt2ng8pk_tin9mr48");	
 			}
 			
 			System.out.println("Connection success");
