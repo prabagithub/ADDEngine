@@ -107,4 +107,22 @@ public class MongoDBDAO {
 		}
 		return result;
 	}
+	
+	public boolean registerUser(User user ){
+		boolean result = true;
+		//MongoCursor<Document> curso = null;
+		try{
+			MongoCollection<Document> collection = mongoDatabase.getCollection("users");
+			Document doc = new Document();
+			doc.put("userName", user.getUsername());
+			doc.put("pwd", user.getPassword());					
+			collection.insertOne(doc);
+						
+		} catch(Exception e){
+			result = false;
+			throw e;
+		}		
+		return result;
+	}
+	
 }

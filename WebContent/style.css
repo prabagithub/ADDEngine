@@ -125,3 +125,8 @@ height: 30px;
 	margin-left:40%;
 	position:absolute;
 }
+
+a{
+	text-decoration: none;
+	color:#B00000;
+}

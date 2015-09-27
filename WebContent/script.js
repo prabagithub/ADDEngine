@@ -19,6 +19,33 @@ var ErrorController = function($scope){
 	$scope.color="red"
 }
 
+
+var LoginController = function($scope){
+	  $scope.message = "Post Your ADD";
+	  $scope.overtopmsg = "Now you can post your ADD at any time, any where !!!";
+	  $scope.color="black";
+	  $scope.header="LOGIN";
+	  $scope.errmsg="Please provide valid login details";
+	  $scope.username="User name";
+	  $scope.pwd="Password";
+	  $scope.btnvalue="Login";
+	  $scope.regmsg="Don't have an account,  create now, it is simple";
+	  
+	}
+
+var RegisterController = function($scope){
+	  $scope.message = "Post Your ADD";
+	  $scope.overtopmsg = "Now you can post your ADD at any time, any where !!!";
+	  $scope.color="black";
+	  $scope.header="Create an Account";
+	  $scope.errmsg="Sorry! Username already exists, Please try with new one";
+	  $scope.username="User name";
+	  $scope.pwd="Password";
+	  $scope.btnvalue="Register";
+	 
+	  
+	}
+
 function check(){
 	
 	var orgName = document.getElementById("orgName").value;

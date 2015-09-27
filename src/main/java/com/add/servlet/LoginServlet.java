@@ -43,17 +43,28 @@ public class LoginServlet extends HttpServlet {
 		try{			
 		user.setUsername(request.getParameter("username"));
 		user.setPassword(request.getParameter("pwd"));
-		
+		String register = request.getParameter("register");
 		MongoDBDAO mongo = new MongoDBDAO();
-		if(mongo.checkUser(user)){
-			viewName="/home.jsp";
+		if(null != register && register.equalsIgnoreCase("register")){
+			if(mongo.checkUser(user)){
+				viewName="/register.jsp";
+			}else{
+				mongo.registerUser(user);
+				viewName="/home.jsp";
+			}
+			
+		}else{
+			if(mongo.checkUser(user)){
+				viewName="/home.jsp";
+			}
+			request.setAttribute("username", user.getUsername());
 		}
-		request.setAttribute("username", user.getUsername());
+					
 		rd = request.getRequestDispatcher(viewName);
 		} catch(Exception e){			
 			rd = request.getRequestDispatcher(viewName);
 		}
-		if(viewName.equalsIgnoreCase("/login.jsp")){
+		if(viewName.equalsIgnoreCase("/login.jsp") || viewName.equalsIgnoreCase("/register.jsp")){
 			request.setAttribute("error", true);
 		}
 		rd.forward(request, response);
