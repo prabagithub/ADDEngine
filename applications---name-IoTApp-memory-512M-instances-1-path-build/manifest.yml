@@ -1,0 +1,5 @@
+applications:
+- name: ADDEngine
+  memory: 512M
+  instances: 1
+  path: build/deploy/addPost.war
