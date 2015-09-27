@@ -16,7 +16,7 @@ if(null != request.getAttribute("username")){
 <jsp:param value="<%=username %>" name="username"/>
 </jsp:include>
 <div class="branding container_12">           
-<form action="AddServlet" method="post" name="home" onsubmit="return check()" >
+<form action="AddServlet" method="post" name="home" >
 
 <input type="hidden" name="username" value="<%=username %> "/>
 <div class="content">
@@ -52,6 +52,7 @@ if(null != request.getAttribute("username")){
   <td></td>
 	  	<td><input type="text" id="state" name="state" ></td>
 	</tr>
+	
 	<tr></tr>
 	
 	<tr>
@@ -74,19 +75,12 @@ if(null != request.getAttribute("username")){
 	  	<td colspan="4"><textarea rows="5" cols="50" id="desc" name="desc" ></textarea></td>
 	</tr>
 	<tr></tr>
-	
-	<tr>
-	<td>Attachment (optional) <span class="red">*</span></td>
-  <td></td>
-	  <td><input type="file" name="filename" id="filename"/>
-	</tr>
-	<tr></tr>
-	
+		
 		<tr>
 	<td></td>
   <td></td>
 	  	<td>
-	  	   <input type="submit" class="button red xlarge" style="color:white;" value="Post - Add"/>	  	   
+	  	   <input type="submit" class="button red xlarge" style="color:white;" value="Proceed"/>	  	   
 	  	   </td>
 	  	   
 	</tr>
@@ -94,6 +88,7 @@ if(null != request.getAttribute("username")){
 	
 	</table>
 </div>
+
 
 
 </form>

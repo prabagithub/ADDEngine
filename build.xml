@@ -98,6 +98,7 @@
 <classpath refid="compile.classpath.test"/>
 <classpath refid="compile.classpath.test.junit" />
 <include name="**/AddServletTest.java"/>
+	<include name="**/MongoDBDAOTest.java"/>
 </javac>
 </target>
 

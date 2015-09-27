@@ -5,7 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Post your ADD - Login</title>
-
 <script src="https://code.angularjs.org/1.3.0-beta.5/angular.js" 
     data-require="angular.js@*" data-semver="2.0.0-alpha.31"></script>        
     <link href="style.css" rel="stylesheet" />

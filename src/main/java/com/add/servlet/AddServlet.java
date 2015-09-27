@@ -8,12 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.add.db.MongoDBDAO;
-import com.add.domain.*;
+import com.add.domain.Client;
 
 /**
  * Servlet implementation class AddServlet
  */
+
+
 public class AddServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -38,9 +39,10 @@ public class AddServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String viewName = "/error.jsp";
+		
 		Client client = new Client();
-		RequestDispatcher rd = null;
+		RequestDispatcher rd = null;		
+		String viewName = "/error.jsp";								
 		try{					
 		client.setOrgName(request.getParameter("orgName"));
 		client.setAddr1(request.getParameter("addr1"));
@@ -52,11 +54,10 @@ public class AddServlet extends HttpServlet {
 		client.setPostalCode(request.getParameter("zip"));
 		client.setAddDesc(request.getParameter("desc"));
 		client.setUserName(request.getParameter("username"));
-		request.setAttribute("client", client);
-		MongoDBDAO mongoDAO = new MongoDBDAO();
-		if(mongoDAO.insertADDDetails(client)){
-			viewName = "/post.jsp";
-		}
+		request.getSession().setAttribute("client", client);
+		request.setAttribute("client", client);		
+		request.setAttribute("username", client.getUserName());		
+		viewName="/step2.jsp";
 		rd = request.getRequestDispatcher(viewName);	
 		}
 		catch(Exception e){

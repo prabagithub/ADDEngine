@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.add.servlet;
+package com.test.servlet;
 
 import static org.junit.Assert.*;
 

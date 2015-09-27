@@ -75,7 +75,16 @@
 	  	<td class="verizoncolor"><%=client.getAddDesc() %></td>
 	</tr>
 	<tr></tr>			
+
+<tr></tr>
 	
+	<tr>
+	<td>Attachment </td>
+  <td></td>
+	  	<td class="verizoncolor"><img src="F:/add3.jpg"/></td>
+	</tr>
+	<tr></tr>			
+		
 	</table>
 </div>
 

@@ -61,6 +61,7 @@ public class MongoDBDAO {
 			doc.put("pincode", client.getPostalCode());
 			doc.put("desc", client.getAddDesc());	
 			doc.put("username", client.getUserName());
+			doc.put("filepath", client.getFileFullPath());
 			collection.insertOne(doc);
 			
 			BasicDBObject basic = new BasicDBObject("username",client.getUserName());
@@ -87,22 +88,22 @@ public class MongoDBDAO {
 		boolean result = false;
 		MongoCursor<Document> cur = null;
 		try{
-			MongoCollection<Document> collection = mongoDatabase.getCollection("users");
-			BasicDBObject basic   = new BasicDBObject ("userName", user.getUsername());
-			FindIterable<Document> cursor = collection.find(basic);
-			if(null != cursor){
-				cur = cursor.iterator();
-				while(cur.hasNext()){
-					Document doc = cur.next();
-					String pwd = (String) doc.get("pwd");
-					if(null != pwd && pwd.equalsIgnoreCase(user.getPassword())){
-						result = true;
+			if(null != user){
+				MongoCollection<Document> collection = mongoDatabase.getCollection("users");
+				BasicDBObject basic   = new BasicDBObject ("userName", user.getUsername());
+				FindIterable<Document> cursor = collection.find(basic);
+				if(null != cursor){
+					cur = cursor.iterator();
+					while(cur.hasNext()){
+						Document doc = cur.next();
+						String pwd = (String) doc.get("pwd");
+						if(null != pwd && pwd.equalsIgnoreCase(user.getPassword())){
+							result = true;
+						}
 					}
 				}
 			}
-			
-			
-			
+												
 		}catch(Exception e){
 			throw e;
 		}

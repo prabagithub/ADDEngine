@@ -21,6 +21,10 @@ public class Client {
 	 private String addDesc;
 	 
 	 private String userName;
+	 
+	 private String fileFullPath;
+	 
+	 
 
 	/**
 	 * @return the orgName
@@ -160,6 +164,20 @@ public class Client {
 	 */
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+
+	/**
+	 * @return the fileFullPath
+	 */
+	public String getFileFullPath() {
+		return fileFullPath;
+	}
+
+	/**
+	 * @param fileFullPath the fileFullPath to set
+	 */
+	public void setFileFullPath(String fileFullPath) {
+		this.fileFullPath = fileFullPath;
 	}
 	 
 	 

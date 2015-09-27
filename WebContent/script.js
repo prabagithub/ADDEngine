@@ -19,6 +19,12 @@ var ErrorController = function($scope){
 	$scope.color="red"
 }
 
+var Step2Contoller = function($scope){
+	$scope.message = "Post your ADD";
+	$scope.overtopmsg = "It is now easy to attach your files";
+	$scope.color="black"
+}
+
 
 var LoginController = function($scope){
 	  $scope.message = "Post Your ADD";
