@@ -3,3 +3,11 @@ sudo: required
 script: ant
 services:
   - mongodb
+deploy:
+  edge:true
+  provider: cloudfoundry
+  username:prabamsec@gmail.com
+  password:praba1krishna
+  api:https://api.run.pivotal.io
+  organization:praba-org
+  space:development
