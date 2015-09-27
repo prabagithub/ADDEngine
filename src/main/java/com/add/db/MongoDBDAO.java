@@ -51,7 +51,7 @@ public class MongoDBDAO {
 	 */
 	public boolean insertADDDetails(Client client ){
 		boolean result = true;
-		MongoCursor<Document> curso = null;
+	//	MongoCursor<Document> curso = null;
 		try{
 			MongoCollection<Document> collection = mongoDatabase.getCollection("adddb");
 			Document doc = new Document();
@@ -68,22 +68,22 @@ public class MongoDBDAO {
 			doc.put("filepath", client.getFileFullPath());
 			collection.insertOne(doc);
 			
-			BasicDBObject basic = new BasicDBObject("username",client.getUserName());
-			FindIterable<Document> cursor = collection.find(basic);
-			if(null != cursor){
-				curso = cursor.iterator();
-				while(curso.hasNext()){
-					System.out.println(curso.next());
-				}
-			}
+		//	BasicDBObject basic = new BasicDBObject("username",client.getUserName());
+		//	FindIterable<Document> cursor = collection.find(basic);
+		////	if(null != cursor){
+		//		curso = cursor.iterator();
+		//		while(curso.hasNext()){
+		//			System.out.println(curso.next());
+		//		}
+		//	}
 			
 		} catch(Exception e){
 			result = false;
 			throw e;
 		}
-		finally{
-				curso.close();
-		}
+		//finally{
+		//		curso.close();
+		//}
 		
 		return result;
 	}
