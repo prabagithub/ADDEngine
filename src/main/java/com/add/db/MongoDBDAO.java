@@ -10,6 +10,7 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.MongoClientURI;
 
 public class MongoDBDAO {
 
@@ -26,7 +27,10 @@ public class MongoDBDAO {
 	
 	private static void initDBConnection(){
 		try{
-			mongoClient = new MongoClient("localhost", 27017);
+			MongoClientURI uu = new MongoClientURI("mongodb://CloudFoundry_rt2ng8pk_tin9mr48_85ogqdj9:QJppO4eURNfKMVvd7tudJC_-ot4ufGGE@ds035633.mongolab.com:35633/CloudFoundry_rt2ng8pk_tin9mr48");
+			//MongoClientURI uu = new MongoClientURI("ds035713.mongolab.com:35713/CloudFoundry_rt2ng8pk_5bfinaug");			
+			mongoClient = new MongoClient(uu);
+		//	mongoClient = new MongoClient("localhost", 27017);
 			if(null != mongoClient){
 				mongoDatabase = mongoClient.getDatabase("Client");	
 			}
@@ -47,7 +51,7 @@ public class MongoDBDAO {
 	 */
 	public boolean insertADDDetails(Client client ){
 		boolean result = true;
-		MongoCursor<Document> curso = null;
+	//	MongoCursor<Document> curso = null;
 		try{
 			MongoCollection<Document> collection = mongoDatabase.getCollection("adddb");
 			Document doc = new Document();
@@ -64,22 +68,22 @@ public class MongoDBDAO {
 			doc.put("filepath", client.getFileFullPath());
 			collection.insertOne(doc);
 			
-			BasicDBObject basic = new BasicDBObject("username",client.getUserName());
-			FindIterable<Document> cursor = collection.find(basic);
-			if(null != cursor){
-				curso = cursor.iterator();
-				while(curso.hasNext()){
-					System.out.println(curso.next());
-				}
-			}
+		//	BasicDBObject basic = new BasicDBObject("username",client.getUserName());
+		//	FindIterable<Document> cursor = collection.find(basic);
+		////	if(null != cursor){
+		//		curso = cursor.iterator();
+		//		while(curso.hasNext()){
+		//			System.out.println(curso.next());
+		//		}
+		//	}
 			
 		} catch(Exception e){
 			result = false;
 			throw e;
 		}
-		finally{
-				curso.close();
-		}
+		//finally{
+		//		curso.close();
+		//}
 		
 		return result;
 	}
