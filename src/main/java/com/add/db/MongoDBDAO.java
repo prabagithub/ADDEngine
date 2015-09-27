@@ -26,7 +26,10 @@ public class MongoDBDAO {
 	
 	private static void initDBConnection(){
 		try{
-			mongoClient = new MongoClient("localhost", 27017);
+			MongoClientURI uu = new MongoClientURI("mongodb://CloudFoundry_rt2ng8pk_tin9mr48_85ogqdj9:QJppO4eURNfKMVvd7tudJC_-ot4ufGGE@ds035633.mongolab.com:35633/CloudFoundry_rt2ng8pk_tin9mr48");
+			//MongoClientURI uu = new MongoClientURI("ds035713.mongolab.com:35713/CloudFoundry_rt2ng8pk_5bfinaug");			
+			mongoClient = new MongoClient(uu);
+		//	mongoClient = new MongoClient("localhost", 27017);
 			if(null != mongoClient){
 				mongoDatabase = mongoClient.getDatabase("Client");	
 			}
