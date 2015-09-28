@@ -16,7 +16,7 @@ if(null != request.getAttribute("username")){
 <jsp:param value="<%=username %>" name="username"/>
 </jsp:include>
 <div class="branding container_12">           
-<form action="AddServlet" method="post" name="home" >
+<form action="AddServlet" method="post" name="home" onsubmit="return check()">
 
 <input type="hidden" name="username" value="<%=username %> "/>
 <div class="content">
