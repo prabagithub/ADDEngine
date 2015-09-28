@@ -12,5 +12,5 @@ git push -u origin master
 
 
 $ cf login -a https://api.run.pivotal.io
-  Email: prabamsec@gmail.com
+  Email: XXXX@gmail.com
   Password: ••••••••
