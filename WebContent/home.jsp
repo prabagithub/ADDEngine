@@ -22,7 +22,7 @@ if(null != request.getAttribute("username")){
 <div class="content">
 	<table>
 	<tr>
-	<td>Organization Name <span class="red">*</span></td>
+	<td>Business Unit Name <span class="red">*</span></td>
   <td></td>
 	  	<td><input type="text" id="orgName" name="orgName" ></td>
 	</tr>
@@ -70,7 +70,7 @@ if(null != request.getAttribute("username")){
 	<tr></tr>
 	
 	<tr>
-	<td>ADD Description <span class="red">*</span></td>
+	<td>AD Description <span class="red">*</span></td>
   <td></td>
 	  	<td colspan="4"><textarea rows="5" cols="50" id="desc" name="desc" ></textarea></td>
 	</tr>
@@ -80,7 +80,7 @@ if(null != request.getAttribute("username")){
 	<td></td>
   <td></td>
 	  	<td>
-	  	   <input type="submit" class="button red xlarge" style="color:white;" value="Proceed"/>	  	   
+	  	   <input type="submit" class="button red xlarge" style="color:white;" value="Proceed to next"/>	  	   
 	  	   </td>
 	  	   
 	</tr>

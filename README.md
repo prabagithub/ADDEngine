@@ -8,9 +8,9 @@ git add .
 git commit -m 'Commit msg'
 git remote add origin 'url'
 git push -u origin master
-**
+****
 
 
 $ cf login -a https://api.run.pivotal.io
   Email: prabamsec@gmail.com
-  Password: ••••••••
+  Password: â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
