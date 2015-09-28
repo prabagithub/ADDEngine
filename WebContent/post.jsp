@@ -14,7 +14,7 @@
 <div class="content">
 	<table>
 	<tr>
-	<td>Organization Name </td>
+	<td>Business Unit Name </td>
   <td></td>
 	  	<td class="verizoncolor"><%= client.getOrgName() %></td>
 	</tr>
@@ -70,7 +70,7 @@
 	<tr></tr>
 	
 	<tr>
-	<td>ADD Description </td>
+	<td>AD Description </td>
   <td></td>
 	  	<td class="verizoncolor"><%=client.getAddDesc() %></td>
 	</tr>

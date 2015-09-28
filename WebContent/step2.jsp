@@ -21,7 +21,7 @@ Client client = (Client) request.getAttribute("client");%>
 <div class="content">
 	<table>
 	<tr>
-	<td>Organization Name </td>
+	<td>Business Unit Name </td>
   <td></td>
 	  	<td class="verizoncolor"><input type="text" disabled="disabled" value="<%= client.getOrgName() %>"/></td>
 	</tr>
@@ -68,7 +68,7 @@ Client client = (Client) request.getAttribute("client");%>
 	<tr></tr>
 	
 	<tr>
-	<td>ADD Description </td>
+	<td>AD Description </td>
   <td></td>
   <td colspan="4" class="verizoncolor"><textarea rows="5" cols="50" id="desc" name="desc" disabled="disabled" ><%=client.getAddDesc() %></textarea>
 	  	</td>

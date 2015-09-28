@@ -1,34 +1,34 @@
 // Code goes here
 
 var MainController = function($scope){
-  $scope.message = "Post Your ADD";
-  $scope.overtopmsg = "Now you can post your ADD at any time, any where !!!";
+  $scope.message = "MAdFlyers";
+  $scope.overtopmsg = "Now you can post your AD at any time, any where !!!";
   $scope.color="black"
 }
 var SuccessController = function($scope){	
 	
-	$scope.message = "Post your ADD";
-	$scope.overtopmsg = "Your ADD successfully posted";
+	$scope.message = "MAdFlyers";
+	$scope.overtopmsg = "Your AD successfully posted";
 	$scope.color="green"
 }
 
 var ErrorController = function($scope){	
 	
-	$scope.message = "Post your ADD";
-	$scope.overtopmsg = "Error in posting ADD, Please try again";
+	$scope.message = "MAdFlyers";
+	$scope.overtopmsg = "Error in posting AD, Please try again";
 	$scope.color="red"
 }
 
 var Step2Contoller = function($scope){
-	$scope.message = "Post your ADD";
+	$scope.message = "MAdFlyers";
 	$scope.overtopmsg = "It is now easy to attach your files";
 	$scope.color="black"
 }
 
 
 var LoginController = function($scope){
-	  $scope.message = "Post Your ADD";
-	  $scope.overtopmsg = "Now you can post your ADD at any time, any where !!!";
+	  $scope.message = "MAdFlyers";
+	  $scope.overtopmsg = "Now you can post your AD at any time, any where !!!";
 	  $scope.color="black";
 	  $scope.header="LOGIN";
 	  $scope.errmsg="Please provide valid login details";
@@ -40,8 +40,8 @@ var LoginController = function($scope){
 	}
 
 var RegisterController = function($scope){
-	  $scope.message = "Post Your ADD";
-	  $scope.overtopmsg = "Now you can post your ADD at any time, any where !!!";
+	  $scope.message = "MAdFlyers";
+	  $scope.overtopmsg = "Now you can post your AD at any time, any where !!!";
 	  $scope.color="black";
 	  $scope.header="Create an Account";
 	  $scope.errmsg="Sorry! Username already exists, Please try with new one";
