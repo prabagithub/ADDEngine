@@ -30,9 +30,9 @@ public class MongoDBDAO {
 			MongoClientURI uu = new MongoClientURI("mongodb://CloudFoundry_rt2ng8pk_tin9mr48_85ogqdj9:QJppO4eURNfKMVvd7tudJC_-ot4ufGGE@ds035633.mongolab.com:35633/CloudFoundry_rt2ng8pk_tin9mr48");
 			//MongoClientURI uu = new MongoClientURI("ds035713.mongolab.com:35713/CloudFoundry_rt2ng8pk_5bfinaug");			
 			mongoClient = new MongoClient(uu);
-		//	mongoClient = new MongoClient("localhost", 27017);
+		//mongoClient = new MongoClient("localhost", 27017);
 			if(null != mongoClient){
-				mongoDatabase = mongoClient.getDatabase("Client");	
+				mongoDatabase = mongoClient.getDatabase("CloudFoundry_rt2ng8pk_tin9mr48");	
 			}
 			
 			System.out.println("Connection success");
@@ -93,7 +93,7 @@ public class MongoDBDAO {
 		MongoCursor<Document> cur = null;
 		try{
 			if(null != user){
-				MongoCollection<Document> collection = mongoDatabase.getCollection("users");
+				MongoCollection<Document> collection = mongoDatabase.getCollection("usersdb");
 				BasicDBObject basic   = new BasicDBObject ("userName", user.getUsername());
 				FindIterable<Document> cursor = collection.find(basic);
 				if(null != cursor){
@@ -118,7 +118,7 @@ public class MongoDBDAO {
 		boolean result = true;
 		//MongoCursor<Document> curso = null;
 		try{
-			MongoCollection<Document> collection = mongoDatabase.getCollection("users");
+			MongoCollection<Document> collection = mongoDatabase.getCollection("usersdb");
 			Document doc = new Document();
 			doc.put("userName", user.getUsername());
 			doc.put("pwd", user.getPassword());					
