@@ -61,7 +61,7 @@ public class UploadServlet extends HttpServlet {
 		try{
 			Client client = (Client)request.getSession().getAttribute("client");
 			request.setAttribute("client", client);
-			request.setAttribute("username", client.getUserName());	
+
 			if(null != client){
 				 if ((contentType.indexOf("multipart/form-data") >= 0)) {				 				 				    					   						    					 					  
 					   DiskFileItemFactory factory = new DiskFileItemFactory();
@@ -87,7 +87,7 @@ public class UploadServlet extends HttpServlet {
 					            boolean isInMemory = fi.isInMemory();
 					            long sizeInBytes = fi.getSize();
 					            // Write the file
-					            if(null != fileName){					            	
+					            if(null != fileName && !"".equalsIgnoreCase(fileName.trim())){					            	
 					            	String username = null != client.getUserName() ? client.getUserName().trim() : "";					            	
 					            	long timestamp = System.currentTimeMillis();
 					            	
@@ -115,7 +115,6 @@ public class UploadServlet extends HttpServlet {
 			}
 		
 		rd = request.getRequestDispatcher(viewName);
-		response.setContentType("image/jpg");
 		}catch(Exception e){
 			 rd = request.getRequestDispatcher("/error.jsp");
 		}

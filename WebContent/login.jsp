@@ -4,7 +4,7 @@
 <html ng-app>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Post your ADD - Login</title>
+<title>MAdFlyers - Login</title>
 <script src="https://code.angularjs.org/1.3.0-beta.5/angular.js" 
     data-require="angular.js@*" data-semver="2.0.0-alpha.31"></script>        
     <link href="style.css" rel="stylesheet" />
@@ -13,7 +13,8 @@
 <body ng-controller="LoginController">
 <table>
                 <tbody><tr>
-                <td><h1 style="margin:5px 0;">{{message}}</h1></td>               
+                <td><h1 style="margin:5px 0;">{{message}}</h1></td> 
+                  <td><img src="images/logo.jpg" style="height:30px;width:30px"/></td>              
                 </tr>
                 </tbody></table>                
                 <div class="redribbon"></div>                                

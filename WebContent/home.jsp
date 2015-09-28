@@ -8,8 +8,8 @@
 
   <body ng-controller="MainController">
   <%String username = null;
-if(null != request.getAttribute("username")){
-	username = (String)request.getAttribute("username");
+if(null != request.getSession().getAttribute("username")){
+	username = (String)request.getSession().getAttribute("username");
 }
 	%>
 <jsp:include page="top.jsp">

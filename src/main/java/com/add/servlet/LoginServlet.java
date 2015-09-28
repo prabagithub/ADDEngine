@@ -59,7 +59,7 @@ public class LoginServlet extends HttpServlet {
 			}
 			
 		}
-		request.setAttribute("username", user.getUsername());			
+		request.getSession().setAttribute("username", user.getUsername());			
 		rd = request.getRequestDispatcher(viewName);
 		} catch(Exception e){			
 			rd = request.getRequestDispatcher(viewName);

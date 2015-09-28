@@ -9,8 +9,8 @@
  <body ng-controller="Step2Contoller">
 <% 
 String username = null;
-if(null != request.getAttribute("username")){
-	username = (String)request.getAttribute("username");
+if(null != request.getSession().getAttribute("username")){
+	username = (String)request.getSession().getAttribute("username");
 }
 Client client = (Client) request.getAttribute("client");%>
 <jsp:include page="top.jsp">
@@ -88,7 +88,7 @@ Client client = (Client) request.getAttribute("client");%>
 	<td></td>
   <td></td>
 	  	<td>
-	  	   <input type="submit" class="button red xlarge" style="color:white;" value="Post-ADD"/>	  	   
+	  	   <input type="submit" class="button red xlarge" style="color:white;" value="Post-AD"/>	  	   
 	  	   </td>
 	  	   
 	</tr>

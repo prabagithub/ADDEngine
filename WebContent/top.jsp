@@ -1,6 +1,7 @@
 <table>
                 <tbody><tr>
-                <td><h1 style="margin:5px 0;">{{message}}</h1></td>                               
+                <td><h1 style="margin:5px 0;">{{message}}</h1></td>
+                <td><img src="images/logo.jpg" style="height:30px;width:30px"/></td>                               
                 </tr>
                 </tbody></table>  
                 <table align="right">

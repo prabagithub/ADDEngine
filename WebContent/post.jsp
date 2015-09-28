@@ -7,8 +7,15 @@
     <script src="script.js"></script>
   </head>
  <body ng-controller="SuccessController">
-<% Client client = (Client) request.getAttribute("client");%>
-<jsp:include page="top.jsp"></jsp:include>
+<% 
+String username = null;
+if(null != request.getSession().getAttribute("username")){
+	username = (String)request.getSession().getAttribute("username");
+}
+Client client = (Client) request.getAttribute("client");%>
+<jsp:include page="top.jsp">
+<jsp:param value="<%=username %>" name="username"/>
+</jsp:include>
 <div class="branding container_12">         
 <form>
 <div class="content">
@@ -81,7 +88,11 @@
 	<tr>
 	<td>Attachment </td>
   <td></td>
-	  	<td class="verizoncolor"><img src="F:/add3.jpg"/></td>
+  <%if(null != client.getFileFullPath()){%>
+  <td class="verizoncolor"><img src="images/image.jpg" style="height:20px;width:20px;" alt="NO Image"/></td>
+  <% }else{%>
+   <td class="verizoncolor">-No Attachment-</td>
+  <%} %>	  	
 	</tr>
 	<tr></tr>			
 		

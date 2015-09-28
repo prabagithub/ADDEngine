@@ -55,8 +55,7 @@ public class AddServlet extends HttpServlet {
 		client.setAddDesc(request.getParameter("desc"));
 		client.setUserName(request.getParameter("username"));
 		request.getSession().setAttribute("client", client);
-		request.setAttribute("client", client);		
-		request.setAttribute("username", client.getUserName());		
+		request.setAttribute("client", client);						
 		viewName="/step2.jsp";
 		rd = request.getRequestDispatcher(viewName);	
 		}
